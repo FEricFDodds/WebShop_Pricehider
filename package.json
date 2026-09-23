@@ -1,0 +1,19 @@
+{
+  "name": "atp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Adaptive Transaction Profile — recommendation-only multi-user web app + API",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @atp/api --filter @atp/web dev",
+    "dev:api": "pnpm --filter @atp/api dev",
+    "dev:web": "pnpm --filter @atp/web dev",
+    "build": "pnpm -r --filter @atp/core --filter @atp/db --filter @atp/worker --filter @atp/api --filter @atp/web build",
+    "test": "pnpm --filter @atp/core test",
+    "smoke": "pnpm --filter @atp/api smoke",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.9"
+}
